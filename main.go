@@ -22,6 +22,8 @@ func main(){
 	case 3:
 		fmt.Println("Enter the project name")
 		java_discord()
+	case 4:
+		fmt.Println("Enter the project name")
 	}
 	
 }
@@ -44,4 +46,11 @@ func java_minecraft(){
 	fmt.Scanln(&projectname)
 	copy.Copy("MinecraftTemplate","C:/Users/anshs/OneDrive/Documents/Code/Java/" + projectname)
 	fmt.Println("Change version and Artifact Id in pom.xml")
+}
+
+func react_website(){
+	var projectname string
+	fmt.Scanln(&projectname)
+	copy.Copy("reactjs","C:/Users/anshs/OneDrive/Documents/Code/WebDevelopement/" + projectname)
+	fmt.Println("Good luck")
 }
