@@ -1,0 +1,4 @@
+name: MinecraftTemplate
+version: '${project.version}'
+main: me.immortal.minecrafttemplate.main
+api-version: 1.19
