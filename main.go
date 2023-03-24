@@ -1,9 +1,14 @@
 package main
+
 import (
-	// "log"
-	"os"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"github.com/otiai10/copy"
+	"os"
 )
+
+
 
 func main(){
 	var i int
@@ -23,15 +28,12 @@ func main(){
 func python_discord(){
 	var projectname string
 	fmt.Scanln(&projectname)
-	
-	os.Mkdir("C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname,os.ModePerm)
-	os.Mkdir("C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname + "/commands",os.ModePerm)
-	os.Mkdir("C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname + "/listeners",os.ModePerm)
-	os.Create("C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname + "/main.py")
-	os.Create("C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname + "/token.env")
-	
-
+	copy.Copy("pythonDiscordTemplate","C:/Users/anshs/OneDrive/Documents/Code/Python/" + projectname)
+	fmt.Println("Make sure to set the environment variables")
 }
 func java_discord(){
-	fmt.Println("Project has been setup")
+	var projectname string
+	fmt.Scanln(&projectname)
+	copy.Copy("JavaDiscordTemplate","C:/Users/anshs/OneDrive/Documents/Code/Java/" + projectname)
+	fmt.Println("Change the Artifact ID in pom.xml")
 }
